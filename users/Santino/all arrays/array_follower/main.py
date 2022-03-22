@@ -88,32 +88,39 @@ def angle_turn(angle,speed):
         #For example if you want to turn the robot 90 degrees it will turn left because the gyro reads left as positive
         #so if you want to turn right it will need to go -90 degrees but you need the progam to be able to accept both negative and
         #positive numbers so it can turn both left and right that is what this part of the program does. It will turn right if the degrees is 
-        #negative and left if it is positive.  
+        #negative and left if it is positive. 
+
+
+        #difference = angle-gyro_sensor.angle()
+
         if angle>0:
+            while gyro_sensor.angle()>angle:
+                left_motor.run(-50)
+                right_motor.run(50)
             left_motor.run(speed)
             right_motor.run(-speed)
+
         if angle<0:
+            while gyro_sensor.angle()<angle:
+                left_motor.run(50)
+                right_motor.run(-50)
             left_motor.run(-speed)
             right_motor.run(speed)
+
+
         if gyro_sensor.angle()==angle:
+            wait(11)
             left_motor.brake()
             right_motor.brake()
-    
+
 
 def move():
     line_follower(board_line.bl_speed,board_line.bl_distance)
     
-def debug_print():
-    while True:
-        print(gyro_sensor.angle())
-
 
 def main():
-    angle_turn(-45,100)
-    print(gyro_sensor.angle())
-    print(gyro_sensor.angle())
-    print(gyro_sensor.angle())
-    
+    angle_turn(90,200)
+
     
 
 #Runs the main function and any functions in the main function.
