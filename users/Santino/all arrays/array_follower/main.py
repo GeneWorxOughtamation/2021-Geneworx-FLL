@@ -119,7 +119,7 @@ def move():
     
 
 def main():
-    angle_turn(90,200)
+    angle_turn(90,500)
 
     
 
