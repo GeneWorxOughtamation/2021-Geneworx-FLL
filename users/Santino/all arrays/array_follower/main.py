@@ -75,7 +75,8 @@ def line_follower(speed,distance):
 
 #Function that uses the indavidual motors to turn the robot to an angle at a specific turn speed.
 
-def angle_turn(angle,speed):
+#Do not use negative correction speed.
+def angle_turn(angle,speed,correction_speed):
     #Makes the robot wait 100 miliseconds which is used so the robot does not set its gyro rest angle while it is turning.
     #wait(100)
     #Sets the gyro angle to 0.
@@ -94,21 +95,24 @@ def angle_turn(angle,speed):
         #difference = angle-gyro_sensor.angle()
 
         if angle>0:
+            #Tells robot to go back if it goes to much and goes past the angle.
             while gyro_sensor.angle()>angle:
-                left_motor.run(-50)
-                right_motor.run(50)
+                left_motor.run(-correction_speed)
+                right_motor.run(correction_speed)
             left_motor.run(speed)
             right_motor.run(-speed)
 
         if angle<0:
+            #Tells robot to go back if it goes to much and goes past the angle.
             while gyro_sensor.angle()<angle:
-                left_motor.run(50)
-                right_motor.run(-50)
+                left_motor.run(correction_speed)
+                right_motor.run(-correction_speed)
             left_motor.run(-speed)
             right_motor.run(speed)
 
-
+        #Tells the robot to stop once it reaches the correct angle.
         if gyro_sensor.angle()==angle:
+            #The robot waits so that it does not stop while it is turn back to the correct angle if it goes over.
             wait(11)
             left_motor.brake()
             right_motor.brake()
@@ -119,7 +123,7 @@ def move():
     
 
 def main():
-    angle_turn(90,500)
+    angle_turn(-45,600,100)
 
     
 
