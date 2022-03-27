@@ -100,21 +100,8 @@ def center_function():
            
 #Defined left function.          
 def left_function():
-    t1.start()
-    t2.start()
-#Thread function 1.
-def thread_move():
-    gyrom(i2mm(3),0,100)
-    gyrom(i2mm(3),0,100)
-#Thread function 1.
-def thread_button():
-    while True:
-        if Button.CENTER in ev3.buttons.pressed():
-            end_code()
-
-#Combanation of thread 1 and thread 2.
-t1 = threading.Thread(target=thread_move)
-t2 = threading.Thread(target=thread_button) 
+    gyrom(i2mm(22),0,200)
+    gyrom(i2mm(-22),0,200)
 
 #Defined right function.
 def right_function():
@@ -143,15 +130,12 @@ def cargo_ship():
 #Cargo Plane mission.
 #Moves towards cargo plane, then moves the gears inorder to have the cargo come out,then goes back to base.
 def cargo_plane():
-    gyrom(i2mm(20),0,150)
-    robot.turn(55)
-    ev3.speaker.beep()
-    robot.turn(-56)
-    ev3.speaker.beep()
-    gyrom(i2mm(5),0,150)
-    ev3.speaker.beep()
-    robot.turn(-55)
-    gyrom(i2mm(1.7),0,150)
+    gyrom(i2mm(12.5),0,150)
+    robot.turn(45)
+    robot.turn(-45)
+    gyrom(i2mm(10.5),0,150)
+    robot.turn(-45)
+    gyrom(i2mm(1.2),0,150)
     right_gear.run_target(90/0.5,760,wait=True)
     right_gear.run_target(90/0.5,-10,wait=True)
     gyrom(i2mm(-3),0,150)

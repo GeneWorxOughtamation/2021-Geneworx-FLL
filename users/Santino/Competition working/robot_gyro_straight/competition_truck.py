@@ -87,24 +87,24 @@ def truck_mission():
     
     gyrom(I2mm(4), 0, 150)                 #Leave base, go straight 9 inches
     gyrom(I2mm(13.5), 30, 150)             #Turn to the left by 30 degrees, go straight 9.25 inches
-    gyrom(I2mm(9.75), -30, 100)             #Turn to the right by 30 degrees, go straight 7.25 inches
+    gyrom(I2mm(9.25), -30, 75)             #Turn to the right by 30 degrees, go straight 7.25 inches
 
-    Rgear(200, 150)                        # The right Medim motor will rotate 150 degrees to the right depositing
+    Rgear(200, 175)                        # The right Medim motor will rotate 150 degrees to the right depositing
                                         # the truck and the atatchment.  (x Points)
 
     gyrom(I2mm(4), -30, 100)                # Go back five inches straight
-    gyrom(I2mm(1.25), 30, 100)
+    gyrom(I2mm(2), 30, 100)
     gyrom(I2mm(4), 0, 125)                 # Robot goes foreward 9 inches
-    Rgear(100, -150)                       # right Medium moror will rotate 150 degrees to the left (to push down first bridge)
+    Rgear(100, -175)                       # right Medium moror will rotate 150 degrees to the left (to push down first bridge)
     gyrom(I2mm(3), 0, 150)
-    Rgear(100, 150)
-    gyrom(I2mm(12), 0, 150)
-    Rgear(100, -150)
-    gyrom(I2mm(-7), 0, 150)                # Robot will move 10 inches foreward, Straight                      # right Medium motor will rotate 150 degrees to the right
+    Rgear(100, 175)
+    gyrom(I2mm(10), 0, 150)
+    Rgear(100, -175)
+    gyrom(I2mm(-9), 0, 150)                # Robot will move 10 inches foreward, Straight                      # right Medium motor will rotate 150 degrees to the right
     #gyrom(I2mm(12), -20, 100)              
     #gyrom(I2mm(2), 0, 150)
     #gyrom(I2mm(4), 0, 100 )
-    Rgear(100, 150)                     # Right medium motor will rotate to the left 150 degrees
+    Rgear(100, 175)                     # Right medium motor will rotate to the left 150 degrees
     #gyrom(I2mm(-5), 0, 175)
     #Rgear(100, 150)
 
