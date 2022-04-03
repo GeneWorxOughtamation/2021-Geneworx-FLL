@@ -123,7 +123,7 @@ def move():
     
 
 def main():
-    angle_turn(-45,190,50)
+    move()
 
 
 #Runs the main function and any functions in the main function.
