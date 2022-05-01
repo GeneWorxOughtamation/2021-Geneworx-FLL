@@ -24,6 +24,7 @@ from pybricks.tools import wait
 from pybricks.robotics import DriveBase
 from angle_turn import angle_turn
 from array_line_follower import line_follower
+from array_gyro import array_gyro
 import threading
 
 #Imports Speed and distance arrays in board_line file.
@@ -45,12 +46,21 @@ gyro_sensor = GyroSensor(Port.S4)
 robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115)
 
 
-def move():
+def line_follower_test():
     line_follower(board_line.bl_speed,board_line.bl_distance)
     
 
-def main():
+def angle_turn_test():
     angle_turn(angle_arrays.array_angle,angle_arrays.array_speed,angle_arrays.array_correction)
+
+def array_gyro_test():
+    array_gyro(100,100,90,40)
+
+def main():
+    array_gyro_test()
+   
+    
+
 
 
 #Runs the main function and any functions in the main function.
