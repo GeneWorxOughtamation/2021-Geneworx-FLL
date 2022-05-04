@@ -33,6 +33,8 @@ import board_line
 #Imports arrays from angle_arrays file.
 import angle_arrays
 
+import array_gyro_arrays
+
 # Initialize the EV3 Brick.
 ev3 = EV3Brick()
 
@@ -54,7 +56,7 @@ def angle_turn_test():
     angle_turn(angle_arrays.array_angle,angle_arrays.array_speed,angle_arrays.array_correction)
 
 def array_gyro_test():
-    array_gyro(100,100,90,40)
+    array_gyro(array_gyro_arrays.distance_array,array_gyro_arrays.speed_array,array_gyro_arrays.angle_array)
 
 def main():
     array_gyro_test()
