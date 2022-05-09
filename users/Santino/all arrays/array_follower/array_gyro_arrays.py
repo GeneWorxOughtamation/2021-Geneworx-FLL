@@ -3,6 +3,6 @@
 
 #If you are going backwards you must put in lowers values as you go backwards.
 
-distance_array= [  5,  6,  13,  5,   0,   0]
-speed_array=    [100, 50, 100,-40,  50,  50]
-angle_array=    [  0,-45, -45,  0,  90,   0]
+distance_array= [ 4,   7,8,  13,16]
+speed_array=    [ 70, 90,100,70,60]
+angle_array=    [-90,-90,-90, 0,90]

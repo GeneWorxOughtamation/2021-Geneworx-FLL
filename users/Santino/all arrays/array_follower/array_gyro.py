@@ -52,26 +52,28 @@ def array_gyro(distance,speed,angle):
             correction = angle[i-1]+gyro_sensor.angle()
 
             #This keeps the robot going straight for a angle.
-            left_motor.run(speed[i-1]-correction)
-            right_motor.run(speed[i-1]+correction)
+            left_motor.run(speed[i-1]+correction)
+            right_motor.run(speed[i-1]-correction)
 
         #Makes the robot run while the distance is less than than the current valuse in the distance array.
         while robot.distance() < 25.4*inches[i-1]:
 
 
             #The correction is the value that is used to be added or subtracted by the current speed.
-            correction = angle[i-1]+gyro_sensor.angle()
+            #If you would like the robot to turn left for a positive angle then subtract the angle by the gyro sensor angle.
+            #If you would like the robot to turn left for a negative angle then add the angle by the gyro sensor angle. 
+            correction = angle[i-1]-gyro_sensor.angle()
 
             #This keeps the robot going straight for a angle.
-            left_motor.run(speed[i-1]-correction)
-            right_motor.run(speed[i-1]+correction)
+            left_motor.run(speed[i-1]+correction)
+            right_motor.run(speed[i-1]-correction)
         
-        while inches[i-1]==0:
 
-            if angle[i-1] > 0:
+        
 
-                left_motor.run(-50)
-                right_motor.run(50)
+            
+
+            
 
             
 
