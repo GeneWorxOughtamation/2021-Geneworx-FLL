@@ -3,6 +3,10 @@
 
 #If you are going backwards you must put in lowers values as you go backwards.
 
-distance_array= [ 4,   7,8,  13,16]
-speed_array=    [ 70, 90,100,70,60]
-angle_array=    [-90,-90,-90, 0,90]
+#If want to go backwards you must use negative speed.
+
+#Uses zero distance if you want to turn without moving.
+
+distance_array= [2]
+speed_array=    [50]
+angle_array=    [0]
