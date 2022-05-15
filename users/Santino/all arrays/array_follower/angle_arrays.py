@@ -1,4 +1,4 @@
 #Arrays for angle turn.
-array_angle =      [-45]
-array_speed =      [100]
-array_correction = [40]
+array_angle =      [40,-20]
+array_speed =      [60, 60]
+array_correction = [40, 40]
