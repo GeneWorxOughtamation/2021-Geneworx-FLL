@@ -8,6 +8,6 @@
 #Uses zero distance if you want to turn without moving.
 
 #                 1  2  3  4  5  6  7  8  9 10 11
-distance_array= [ 2, 0,20,21]
-speed_array=    [50,50,70,70]
-angle_array=    [ 0,35,35,35]
+distance_array= [   0,  0]
+speed_array=    [  60, 60]
+angle_array=    [ -30, 90]

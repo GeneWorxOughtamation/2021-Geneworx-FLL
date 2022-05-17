@@ -79,13 +79,26 @@ def array_gyro(distance,speed,angle):
         
             #Tells the robot to run the next part of the program only if the gyro angle is not equal to the current angle. 
             while gyro_sensor.angle() != angle[i-1]:
+
+                #This if statement is used to figure out if the the wanted angle is positive.
                 if angle[i-1] > 0:
                     left_motor.run(speed[i-1])
                     right_motor.run(-speed[i-1])
 
+                #This if statement is used to figure out if the the wanted angle is negative.
                 if angle[i-1] < 0:
                     left_motor.run(-speed[i-1])
                     right_motor.run(speed[i-1])
+
+                #This if statement is used to figure out if the wanted angle is less than the current angle.
+                if angle[i-1] < angle[i-2]:
+                    left_motor.run(-speed[i-1])
+                    right_motor.run(speed[i-1])
+
+                #This if statement is used to figure out if the wanted angle is greater than the current angle.
+                if angle[i-1] > angle[i-2]:
+                    left_motor.run(speed[i-1])
+                    right_motor.run(-speed[i-1])
 
                 #Tells the robot to stop once it reaches the correct angle.
                 if gyro_sensor.angle() == angle[i-1]:
@@ -95,7 +108,8 @@ def array_gyro(distance,speed,angle):
                     right_motor.brake()
 
             
-            
+
+
 #Old commented program use for refrense        
 """
  while gyro_sensor.angle() != angle[i-1]:
