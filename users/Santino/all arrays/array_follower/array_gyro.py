@@ -27,7 +27,7 @@ gyro_sensor.reset_angle(0)
 
 #This program uses the gyro to turn and move forward and backward.
 
-def array_gyro(distance,speed,angle):
+def array_gyro(distance,speed,angle,roll):
 
     robot.reset()
 
@@ -73,6 +73,11 @@ def array_gyro(distance,speed,angle):
                 #This keeps the robot going straight for a angle.
                 left_motor.run(speed[i-1]+correction)
                 right_motor.run(speed[i-1]-correction)
+
+        if roll[i-1] == 1:
+            left_motor.brake()
+            right_motor.brake()
+
 
         #Runs the turn program if the current amount of inches is equal to zero.
         if inches[i-1] == 0:

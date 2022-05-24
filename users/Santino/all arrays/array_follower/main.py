@@ -56,7 +56,7 @@ def angle_turn_test():
     angle_turn(angle_arrays.array_angle,angle_arrays.array_speed,angle_arrays.array_correction)
 
 def array_gyro_test():
-    array_gyro(array_gyro_arrays.distance_array,array_gyro_arrays.speed_array,array_gyro_arrays.angle_array)
+    array_gyro(array_gyro_arrays.distance_array,array_gyro_arrays.speed_array,array_gyro_arrays.angle_array,array_gyro_arrays.roll_array)
 
 
 
