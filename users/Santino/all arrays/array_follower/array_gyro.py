@@ -3,6 +3,14 @@
 #By Santino .J. Tomasi
 #Version 2
 
+#List of fastest times.
+#18 seconds Date 5/24/2022 Time 8:25 pm
+#21 seconds Date 5/24/2022 Time 8:22 pm
+#22 seconds Date 5/24/2022 Time 8:18 pm
+#29 seconds Date 5/24/2022 Time 8:07 pm
+#34 seconds Date 5/24/2022 Time not sure
+
+
 #All imports.
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, ColorSensor,GyroSensor
