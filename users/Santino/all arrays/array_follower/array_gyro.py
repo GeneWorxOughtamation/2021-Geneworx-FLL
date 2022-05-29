@@ -3,6 +3,9 @@
 #By Santino .J. Tomasi
 #Version 2
 
+#Max speed
+#So far it does not matter and all speeds are equaliy inaccuret
+
 #List of fastest times.
 #18 seconds Date 5/24/2022 Time 8:25 pm
 #21 seconds Date 5/24/2022 Time 8:22 pm
@@ -119,6 +122,10 @@ def array_gyro(distance,speed,angle,roll):
                     wait(11)
                     left_motor.brake()
                     right_motor.brake()
+
+    gyro_sensor.reset_angle(0)
+    robot.reset()
+                    
 
             
 
