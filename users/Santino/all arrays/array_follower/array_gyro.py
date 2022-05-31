@@ -7,6 +7,8 @@
 #So far it does not matter and all speeds are equaliy inaccuret
 
 #List of fastest times.
+#14 seconds Date 5/31.2022 Time 7:00 pm
+#17 seconds Date 5/31/2022 Time 6:38 pm
 #18 seconds Date 5/24/2022 Time 8:25 pm
 #21 seconds Date 5/24/2022 Time 8:22 pm
 #22 seconds Date 5/24/2022 Time 8:18 pm
