@@ -25,6 +25,7 @@ from pybricks.robotics import DriveBase
 from angle_turn import angle_turn
 from array_line_follower import line_follower
 from array_gyro import array_gyro
+from line_up import line_up
 import threading
 
 #Imports Speed and distance arrays in board_line file.
@@ -62,8 +63,11 @@ def array_gyro_test():
 def array_gyro_sixfeet_test():
     array_gyro(array_gyro_arrays.distance_six_feet_test,array_gyro_arrays.speed_six_feet_test,array_gyro_arrays.angle_six_feet_test,array_gyro_arrays.roll_six_feet_test)
 
+def line_up_test():
+    line_up()
+
 def main():
-   array_gyro_test()
+   line_up_test()
    
     
 
