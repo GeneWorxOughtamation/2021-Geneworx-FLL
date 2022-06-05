@@ -37,6 +37,9 @@ import angle_arrays
 #Imports arrays from array_gyro file.
 import array_gyro_arrays
 
+#Imports function test arrays
+import function_test_arrays
+import test7
 # Initialize the EV3 Brick.
 ev3 = EV3Brick()
 
@@ -66,8 +69,21 @@ def array_gyro_sixfeet_test():
 def line_up_test():
     line_up()
 
+def function_test():
+    #                      Distance array         ,          Speed array           ,           Angle array          ,          Roll array
+    array_gyro(function_test_arrays.distance_array,function_test_arrays.speed_array,function_test_arrays.angle_array,function_test_arrays.roll_array)
+    #                  Line speed array          ,           Line distance 
+    line_follower(function_test_arrays.line_speed,function_test_arrays.line_distance)
+    #                      Distance array2         ,          Speed array2           ,           Angle array2          ,          Roll array2
+    array_gyro(function_test_arrays.distance_array2,function_test_arrays.speed_array2,function_test_arrays.angle_array2,function_test_arrays.roll_array2)
+    #                  Line speed array2          ,           Line distance array2
+    line_follower(function_test_arrays.line_speed2,function_test_arrays.line_distance2)
+
+def test():
+    array_gyro(test7.array_distance,test7.array_speed,test7.array_angle,test7.array_roll)
+
 def main():
-   line_up_test()
+   test()
    
     
 

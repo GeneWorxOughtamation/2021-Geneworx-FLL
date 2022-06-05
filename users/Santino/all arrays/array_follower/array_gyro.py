@@ -35,14 +35,14 @@ gyro_sensor = GyroSensor(Port.S4)
 #Sets robot to equal DriveBase.
 robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115)
 
-#Resets the gyro angle at the beginning of the program.
-gyro_sensor.reset_angle(0)
 
 #This program uses the gyro to turn and move forward and backward.
 
 def array_gyro(distance,speed,angle,roll):
 
-    robot.reset()
+    #Resets the gyro angle at the beginning of the program.
+    gyro_sensor.reset_angle(0)
+
 
     #Sets inches to equal the value of distance.
     inches = distance
@@ -55,6 +55,8 @@ def array_gyro(distance,speed,angle,roll):
 
     #The while i<x makes the function not go over the values in the arrays.
     while i<x:
+        print("Gyro program")
+        print(robot.distance()/25.4)
 
         #Increases the value of i every time the program goes through the function.
         i=i+1
@@ -126,7 +128,6 @@ def array_gyro(distance,speed,angle,roll):
                     right_motor.brake()
 
     gyro_sensor.reset_angle(0)
-    robot.reset()
                     
 
             

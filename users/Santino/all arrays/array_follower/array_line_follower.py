@@ -31,6 +31,7 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115
 # and runs the speed associated with that distance. 
 
 def line_follower(speed,distance):
+
     #Black reflection value.
     black = 9
     #White reflection value.
@@ -47,12 +48,15 @@ def line_follower(speed,distance):
 
     #The while i<x makes the function not go over the values in the arrays.
     while i<x:
+        print("Line follower")
+        print(robot.distance()/25.4)
         #Increases the value of i every time the program goes through the function.
         i=i+1
 
         #Makes sure the robot goes for the correct amount of inches.
         while robot.distance()<25.4*inches[i-1]:
-            print(light_sensor.reflection())
+            print("Line follower")
+            print(robot.distance()/25.4)
             deviation = light_sensor.reflection() - threshold
             bmotor=array_speed[i-1]+deviation
             cmotor=array_speed[i-1]-deviation
