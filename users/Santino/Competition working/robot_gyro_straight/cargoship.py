@@ -134,26 +134,27 @@ def turn( angle ):
 
 #does the unloadCargoShip mission
 
+#move_straight(250,8,3,1,1)
+#print("phase2")
+#left_medium.run_time(100,1000,then=Stop.HOLD,wait=False)
+#turn(5)
+
 def unloadCargoShip():
     move_straight(200,3,3,1,1)
     move_straight(-200,3,3,1,1)
     move_straight(200,3,3,1,1)
-    turn(-50)
-    move_straight(250,28,3,1,1)
     turn(-45)
-    move_straight(250,20,3,1,1)
-    turn(5)
-    move_straight(250,8,3,1,1)
-    print("phase2")
-    left_medium.run_time(100,1000,then=Stop.HOLD,wait=False)
-   
+    move_straight(250,30,3,1,1)
+    turn(-41)
+    move_straight(250,25,3,1,1)
+    
     print("phase3")
     move_straight(-200,14,3,1,1)
     turn(-90)
     move_straight(-200,16,3,1,1)
-    move_straight(200,12,3,1,1)#how close to the truck load
-    turn(90)
-    move_straight(-200,10,3,1,1)#how close to the line
+    #move_straight(200,12,3,1,1)#how close to the truck load
+    #turn(90)
+    #move_straight(-200,10,3,1,1)#how close to the line
 
 def deliverPackage():
     move_straight(200,46,-1,3,1)
