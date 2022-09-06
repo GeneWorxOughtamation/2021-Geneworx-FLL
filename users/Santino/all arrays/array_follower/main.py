@@ -83,7 +83,7 @@ def test():
     array_gyro(test7.array_distance,test7.array_speed,test7.array_angle,test7.array_roll)
 
 def main():
-   test()
+   line_up_test()
    
     
 
