@@ -54,7 +54,7 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115
 
 
 def line_follower_test():
-    line_follower(board_line.bl_speed,board_line.bl_distance)
+    line_follower(board_line.bl_speed,board_line.bl_distance,board_line.bl_sensor,board_line.bl_side)
     
 
 def angle_turn_test():
@@ -83,7 +83,7 @@ def test():
     array_gyro(test7.array_distance,test7.array_speed,test7.array_angle,test7.array_roll)
 
 def main():
-   line_up_test()
+   line_follower_test()
    
     
 
