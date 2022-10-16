@@ -9,15 +9,15 @@
 #All imports used in program.
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, ColorSensor,GyroSensor
-from pybricks.parameters import Port,Direction
+from pybricks.parameters import Port,Direction, Color
 from pybricks.tools import wait
 from pybricks.robotics import DriveBase
 
 #Defines the motors and sensors.
 left_motor = Motor(Port.B,positive_direction=Direction.COUNTERCLOCKWISE)
 right_motor = Motor(Port.C,positive_direction=Direction.COUNTERCLOCKWISE)
-light_sensor_left = ColorSensor(Port.S2)
-light_sensor_right = ColorSensor(Port.S1)
+right_sensor = ColorSensor(Port.S2)
+left_sensor = ColorSensor(Port.S1)
 
 #Defines robot.
 robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115)
@@ -43,6 +43,34 @@ def line_up():
 
     while run:
 
+        print("Left")
+        print(left_sensor.reflection())
+        print("Right")
+        print(right_sensor.reflection())
+        
+        """
+        if right_sensor.color() == Color.BLACK and left_sensor.color() == Color.BLACK:
+            run = False
+
+        while right_sensor.color() == Color.BLACK:
+            right_motor.run(40+10)
+            
+
+        while left_sensor.color() == Color.BLACK:
+            left_motor.run(40+10)
+            
+        
+        left_motor.run(20)
+        right_motor.run(20)
+        """
+
+
+
+
+
+
+
+        """
         #This if statment is used to figure out if both the robots color sensors reached the black line at the same time.
         if light_sensor_right.reflection() and light_sensor_left.reflection() == threshold:
 
@@ -111,7 +139,7 @@ def line_up():
         #This runs the motors until one or both the light sensors reach the black line.
         left_motor.run(40)
         right_motor.run(40)
-
+        """
 
  
 
