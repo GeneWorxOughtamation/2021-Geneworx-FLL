@@ -1,4 +1,4 @@
-#!/usr/bin/env pybricks-micropython
+#By Peiro Gammara
 
 """
 Example LEGO® MINDSTORMS® EV3 Robot Educator Driving Base Program
@@ -12,36 +12,50 @@ https://education.lego.com/en-us/support/mindstorms-ev3/building-instructions#ro
 """
 
 from pybricks.hubs import EV3Brick
-from pybricks.ev3devices import Motor
-from pybricks.parameters import Port
+from pybricks.ev3devices import Motor, GyroSensor
+from pybricks.parameters import Port, Direction
 from pybricks.robotics import DriveBase
+
+
+
+
 
 # Initialize the EV3 Brick.
 ev3 = EV3Brick()
 
 # Initialize the motors.
-#Motor for up and down movement.
-u2d_motor = Motor(Port.A)
-#Motor for left and right movement.
-l2r_motor = Motor(Port.D)
+left_motor = Motor(Port.B,positive_direction=Direction.COUNTERCLOCKWISE)
+right_motor = Motor(Port.C,positive_direction=Direction.COUNTERCLOCKWISE)
+Lmotor_updown = Motor(Port.A,positive_direction=Direction.COUNTERCLOCKWISE)
+Medmotor_leftright = Motor(Port.D,positive_direction=Direction.COUNTERCLOCKWISE)
+gyro = GyroSensor(Port.S4,Direction.CLOCKWISE)
 
-run = True
+# Initialize the drive base.
+robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
-def move_elevator(ud_speed,lr_speed,ud_angle,lr_angle):
 
-    i = 0
-    x = len(up_speed)
+def eUPmovement(speed, UP ,LEFT):
+    if UP >= 0:
+        while Lmotor_updown.angle() <= UP:
+            Lmotor_updown.run_target(speed, UP)
+            if Lmotor_updown.angle() >= UP:
+                break
 
-    while i<x:
-        
-        while run:
-            if ud_angle[0] == u2d_motor.angle() and lr_angle[0] == l2r_motor.angle():
-                run = False
-                
-            u2d_motor.run_target(ud_speed[i], ud_angle[i], then=Stop.HOLD, wait=True)
-            l2r_motor.run_target(lr_speed[i], lr_angle[i], then=Stop.HOLD, wait=True)
+    elif UP <= 0:
+        while Lmotor_updown.angle() >= UP:
+            Lmotor_updown.run_target(speed, UP)
+            if Lmotor_updown.angle() <= UP:
+                break
 
-            i+=1
+    if LEFT >= 0:
+        while Medmotor_leftright.angle() <= LEFT:
+            Medmotor_leftright.run_target(speed, LEFT)
+            if Medmotor_leftright.angle() >= LEFT:
+                break
 
-        
 
+    elif LEFT <= 0:
+        while Medmotor_leftright.angle() >= LEFT:
+            Medmotor_leftright.run_target(speed, LEFT)
+            if Medmotor_leftright.angle() <= LEFT:
+                break
