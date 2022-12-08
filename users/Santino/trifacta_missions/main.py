@@ -27,12 +27,9 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115
 def main():
     
     #T.v part.
-    array_gyro([14,17,16],[200,470,-100],[0,0,0],[1,1,1])
+    angle_turn([45],[70],[50])
 
-    #Getting to wind turbine.
+    
    
-
-
-
 if __name__ == "__main__":
     main()
