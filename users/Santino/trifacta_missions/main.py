@@ -26,8 +26,8 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115
 
 def main():
     
-    #T.v part.
-    angle_turn([45],[70],[50])
+    array_gyro([5],[50],[0],[1])
+    angle_turn([-45],[100],[20])
 
     
    
