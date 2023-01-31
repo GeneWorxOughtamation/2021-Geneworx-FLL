@@ -78,15 +78,19 @@ def lever():
 
             
 
-
-gyrom(17.5, 0, 200 )
+eUPmovement(250, -2, 850)
+gyrom(17.5, 0, 200)
 lever()
 lever()
+#lever pt2
 eUPmovement(200,-360,0)
 eUPmovement(200, .4,0)
-gyrom(-2.25, 0, 200 )
-    #eUPmovement(-150, -180, 0)
-    #eUPmovement(250, -2, -1150)
+#backwards
+gyrom(-6, 0, 400)
+eUPmovement(250, -2, -1000)
+gyrom(3.5, 0, 150)
+eUPmovement(200,-100,0)
+eUPmovement(200,100,0)
 gyrom(-20, 0, 150 )
 eUPmovement(150, 0, 5)
 
