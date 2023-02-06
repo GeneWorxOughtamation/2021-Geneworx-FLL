@@ -14,7 +14,11 @@ from pybricks.robotics import DriveBase
 from lib.angle_turn import angle_turn
 from lib.array_gyro import array_gyro
 from lib.move_elevator import eUPmovement
+from lib.gyrom import gyrom
 
+def I2mm( inches ):
+    mm=25.4*inches
+    return mm
 
 #Sets motors and gyro.
 left_motor = Motor(Port.B,positive_direction=Direction.COUNTERCLOCKWISE)
@@ -26,31 +30,37 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115
 
 
     #T.v. show. 
-array_gyro([16],[690],[0],[1])
-    
-array_gyro([14],[-300],[0],[1])
+gyrom(16,0,690)
 
-angle_turn([35],[60],[50])
+gyrom(-2,0,100)
 
-array_gyro([32],[300],[0],[1])
+gyrom(17,40,200)
 
-angle_turn([-70],[60],[50])
+gyrom(-6,-75,70)
 
-    #Hitting the wind mill.
-array_gyro([44],[500],[0],[1])
+gyrom(6,0,400)
 
-array_gyro([43],[-150],[0],[1])
+gyrom(-6,0,100)
 
-array_gyro([46],[500],[0],[1])
+gyrom(6,0,400)
+#gyrom(-2,50,0)
+#angle_turn([-70],[60],[50])
 
-array_gyro([44],[-150],[0],[1])
+#Hitting the wind mill.
+#array_gyro([44],[500],[0],[1])
 
-array_gyro([46],[500],[0],[1])
+#array_gyro([43],[-150],[0],[1])
 
-array_gyro([44],[-150],[0],[1])
+#array_gyro([46],[500],[0],[1])
 
-array_gyro([46],[500],[0],[1])
+#array_gyro([44],[-150],[0],[1])
 
-array_gyro([44],[-150],[0],[1])
+#array_gyro([46],[500],[0],[1])
+
+#array_gyro([44],[-150],[0],[1])
+
+#array_gyro([46],[500],[0],[1])
+
+#array_gyro([44],[-150],[0],[1])
 
     
