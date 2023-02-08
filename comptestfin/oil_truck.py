@@ -72,23 +72,27 @@ def gyrom(dis, ang, speed):
         right_motor.reset_angle(0)
 
 def lever():
-    eUPmovement(200, -360, 0)
-    eUPmovement(200, 12, 0)
+    eUPmovement(500, -360, 0)
+    eUPmovement(500, 12, 0)
 
 
             
 
-
-gyrom(17.5, 0, 200 )
+eUPmovement(500, -1.8, 850)
+gyrom(17.5, 0, 200)
 lever()
 lever()
-eUPmovement(200,-360,0)
-eUPmovement(200, .4,0)
-gyrom(-2.25, 0, 200 )
-    #eUPmovement(-150, -180, 0)
-    #eUPmovement(250, -2, -1150)
-gyrom(-20, 0, 150 )
-eUPmovement(150, 0, 5)
+#lever pt2
+eUPmovement(500,-360,0)
+eUPmovement(500, .4,0)
+#backwards
+gyrom(-6, 0, 400)
+eUPmovement(250, -80, -750)
+gyrom(2.25, 0, 125)
+#eUPmovement(200,-150,0)
+eUPmovement(500,25,0)
+gyrom(-20, 0, 300 )
+eUPmovement(500, 0, 5)
 
 
 
