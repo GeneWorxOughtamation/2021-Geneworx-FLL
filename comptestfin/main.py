@@ -34,15 +34,23 @@ gyrom(16,0,690)
 
 gyrom(-2,0,100)
 
-gyrom(17,40,200)
+robot.turn(90)
+gyrom(17,0,200)
 
-gyrom(-6,-75,70)
+robot.turn(-180)
+gyrom(-3,0,100)
+robot.turn(-10)
+gyrom(6,0,100)
 
-gyrom(6,0,400)
+gyrom(-4,0,100)
 
-gyrom(-6,0,100)
+gyrom(6,0,100)
+gyrom(-4,0,100)
 
-gyrom(6,0,400)
+gyrom(6,0,100)
+gyrom(-4,0,100)
+robot.turn(-150)
+gyrom(90,0,100)
 #gyrom(-2,50,0)
 #angle_turn([-70],[60],[50])
 
