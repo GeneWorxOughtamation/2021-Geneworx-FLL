@@ -13,12 +13,16 @@ Download: https://education.lego.com/en-us/support/mindstorms-ev3/python-for-ev3
 Building instructions can be found at:
 https://education.lego.com/en-us/support/mindstorms-ev3/building-instructions#robot
 """
+from lib.move_elevator import eUPmovement
+from lib.angle_turn import angle_turn
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, GyroSensor
 from pybricks.parameters import Port, Direction
 from pybricks.robotics import DriveBase
 
-
+from lib.angle_turn import angle_turn
+from lib.array_gyro import array_gyro
+from lib.move_elevator import eUPmovement
 
 
 
@@ -69,5 +73,35 @@ def gyrom(dis, ang, speed):
         left_motor.reset_angle(0)
         right_motor.reset_angle(0)
 
-gyrom(20,0, 200)
-gyrom(45,-45,250)
+def lever():
+    eUPmovement(500, -360, 0)
+    eUPmovement(500, 12, 0)
+
+
+            
+#array_gyro(distance,speed,angle,roll)
+
+gyrom(22, 0, 200)
+robot.turn(120)
+gyrom(30, 0, 300)
+eUPmovement(500,-90, 0)
+gyrom(-2,0,200)
+robot.turn(60)
+robot.turn(-60)
+gyrom(-20, 0, 300)
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                    
+
+
