@@ -24,31 +24,30 @@ def I2mm( inches ):
 left_motor = Motor(Port.B,positive_direction=Direction.COUNTERCLOCKWISE)
 right_motor = Motor(Port.C,positive_direction=Direction.COUNTERCLOCKWISE)
 gyro_sensor = GyroSensor(Port.S4)
+
 #Sets robot to equal DriveBase.
 robot = DriveBase(left_motor, right_motor, wheel_diameter=62.4, axle_track=115)
 
 
-#T.v. show. 
+    #T.v. show. 
 
-gyrom(16,0,690)
 
-gyrom(-2,0,100)
-robot.turn(70)
+robot.turn(160)
 gyrom(17,0,200)
 
-robot.turn(-125)
+robot.turn(-180)
+gyrom(-3,0,100)
 
-gyrom(7,0,150)
-
-gyrom(-4,0,100)
-
-gyrom(7,0,150)
-gyrom(-4,0,100)
-gyrom(7,0,150)
+gyrom(4,0,100)
 
 gyrom(-4,0,100)
-gyrom(5,0,150)
-gyrom(-5,0,100)
 
-robot.turn(-140)
-robot.straight(I2mm(50))
+gyrom(4,0,100)
+gyrom(-4,0,100)
+
+gyrom(4,0,100)
+gyrom(-4,0,100)
+robot.turn(-70)
+gyrom(-4,0,100)
+robot.turn(-180)
+gyrom(90,0,100)

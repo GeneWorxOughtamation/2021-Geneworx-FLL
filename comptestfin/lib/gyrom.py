@@ -27,7 +27,7 @@ light_sensor = ColorSensor(Port.S2)
 gyro = GyroSensor(Port.S4)
 
 # Initialize the drive base.                
-robot = DriveBase(left_motor, right_motor, wheel_diameter=61.918, axle_track=115)
+robot = DriveBase(left_motor, right_motor, wheel_diameter=62.4, axle_track=115)
 
 
 def gyrom(dis, ang, speed):
