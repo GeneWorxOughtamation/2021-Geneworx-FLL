@@ -81,15 +81,20 @@ def lever():
             
 #array_gyro(distance,speed,angle,roll)
 
-gyrom(22, 0, 200)
-robot.turn(120)
-gyrom(30, 0, 300)
+gyrom(28,0,500)
+gyrom(-32,0,500)
+
+"""
+gyrom(22, 0, 180)
+robot.turn(200)
+gyrom(29, 0, 300)
+gyrom(5,0,100)
 eUPmovement(500,-90, 0)
 gyrom(-2,0,200)
 robot.turn(60)
 robot.turn(-60)
 gyrom(-20, 0, 300)
-
+"""
 
 
 
